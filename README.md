@@ -1,1 +1,1 @@
-# Projeto WEB 1
+# Projeto de estoque de um mercado
