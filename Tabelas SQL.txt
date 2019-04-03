@@ -1,0 +1,28 @@
+create table mercado
+(
+	id_mercado serial,
+	nome varchar(50) not null,
+	primary key(id_mercado)
+);
+
+create table funcionario
+(
+	id_funcionario serial,
+	nome varchar(50)not null,
+	senha varchar(50)not null,
+	id_mercado serial,
+	primary key (id_funcionario),
+	foreign key (id_mercado) references mercado (id_mercado)
+);
+
+
+create table produtos
+(
+	id_produtos serial,
+	nome varchar(50)not null,
+	preco float,
+	unidade int,
+	id_mercado int,
+	primary key(id_produtos),
+	foreign key(id_mercado) references mercado (id_mercado)
+);
